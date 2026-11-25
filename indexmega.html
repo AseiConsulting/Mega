@@ -5,14 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Internet de fibra óptica en CDMX | Mega</title>
 <meta name="description" content="Elige tu velocidad, revisa si hay cobertura en tu zona y cotiza por WhatsApp. Instalación sin costo.">
-<meta name="theme-color" content="#0A6B3C">
+
+    <!-- Vista previa para Facebook y redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Asei Consulting">
+    <meta property="og:description"
+          content="Conoce nuestros productos y servicios. Visita nuestra página.">
+
+    <meta property="og:image"
+          content="https://aseiconsulting.github.io/Mega/indexmega.html/portada.jpg">
+
+    <meta property="og:url"
+          content="https://aseiconsulting.github.io/Mega/indexmega.html">
+
+    <meta property="og:site_name" content="ASEI">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi página web">
+    <meta name="twitter:description"
+          content="Conoce nuestros productos y servicios.">
+    <meta name="twitter:image"
+          content="https://aseiconsulting.github.io/Mega/indexmega.html/portada.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F2F7F1; --surface:#FFFFFF; --ink:#10241A; --muted:#4B6256; --line:#D3E1D6;
-    --brand:#0A6B3C; --brand-ink:#FFFFFF; --accent:#FFD23F; --accent-ink:#2B2200;
+    --bg:#F1F5FC; --surface:#FFFFFF; --ink:#0F1B33; --muted:#4A5A78; --line:#D5DEEE;
+    --brand:#0A4DC4; --brand-ink:#FFFFFF; --accent:#FFD23F; --accent-ink:#2B2200;
     --wa:#0F8A44; --wa-ink:#FFFFFF; --focus:#1A5CFF;
     --display:"Bricolage Grotesque", system-ui, sans-serif;
     --text:"Instrument Sans", system-ui, sans-serif;
@@ -20,8 +42,8 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#0C1A13; --surface:#132A1E; --ink:#EAF4EC; --muted:#A5BFAF; --line:#25402F;
-      --brand:#4FD184; --brand-ink:#06210F; --wa:#2FBF66; --wa-ink:#04210F; --focus:#8FB0FF;
+      --bg:#0A1426; --surface:#101F3A; --ink:#EAF0FC; --muted:#A7B6D4; --line:#22365A;
+      --brand:#6EA2FF; --brand-ink:#06142F; --wa:#2FBF66; --wa-ink:#04210F; --focus:#8FB0FF;
       color-scheme: dark;
     }
   }
@@ -38,6 +60,10 @@
   /* Encabezado */
   .top{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
   .brand{font-family:var(--display);font-weight:800;font-size:1.5rem;letter-spacing:-.03em;text-decoration:none;color:var(--brand)}
+  .logo-img{display:block;height:36px;width:auto}
+  .brand-txt{display:none}
+  .brand.sin-logo .logo-img{display:none}
+  .brand.sin-logo .brand-txt{display:inline}
   .brand small{font-family:var(--text);font-weight:500;font-size:.85rem;color:var(--muted);margin-left:.4rem;letter-spacing:0}
   .call{font-weight:600;text-decoration:none;font-size:.95rem;padding:.55rem .9rem;border:1.5px solid var(--line);border-radius:999px}
 
@@ -100,7 +126,7 @@
 
   /* Modal de WhatsApp */
   dialog.modal{border:0;border-radius:22px;padding:0;width:min(460px,calc(100% - 2rem));background:var(--surface);color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.35);margin:auto}
-  dialog.modal::backdrop{background:rgba(8,20,14,.6)}
+  dialog.modal::backdrop{background:rgba(6,12,28,.6)}
   .modal-in{padding:1.4rem}
   .modal h2{font-size:1.5rem}
   .m-sub{color:var(--muted);font-size:.95rem;margin-top:.5rem}
@@ -138,7 +164,14 @@
 <body>
 
 <header class="wrap top">
-  <a class="brand" href="#" aria-label="Mega, inicio">mega<small>CDMX</small></a>
+  <a class="brand" href="#" aria-label="Megacable, inicio">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://ofertas.megacable.com.mx/p/pmax_cdmx/assets/img/logos/logo-megacable-bco.svg">
+      <img class="logo-img" src="https://ofertas.megacable.com.mx/p/pmax_cdmx/assets/img/logos/logo-megacable.svg" alt="Megacable" height="36"
+           onerror="this.closest('a').classList.add('sin-logo')">
+    </picture>
+    <span class="brand-txt">mega<small>CDMX</small></span>
+  </a>
   <a class="call" href="tel:+525657401709">+52 56 5740 1709</a>
 </header>
 
